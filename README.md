@@ -4,16 +4,10 @@ Odoo+Docker+Postgreql+Pgadmin+wdb+Nginx+Certbot+letsecrypt
 # Clonar el proyecto
 git clone
 
-# install Letscrypt certificate
-apt-get install certbot
+# install 
+sh install.sh
 
-# create certificate
-certbot certonly --standalone -d dominio.com
+# Realizar lo indicado
 
-# copy certificates a /opt/odoo/certbot/conf/live/dominio.com/
-cp /etc/letscrypt/live/dominio/fulchaim.pem
-cp /etc/letscrypt/live/dominio/privkey.pem
-
-cp odoo.conf /opt/odoo/conf
-
+# Finalmente
 docker-compose up -d

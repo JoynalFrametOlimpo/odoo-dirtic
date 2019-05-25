@@ -80,6 +80,27 @@ services:
            - /opt/odoo/certbot/conf:/etc/letsencrypt
            - /opt/odoo/certbot/www:/var/www/certbot
         entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    poste:
+        image: analogic/poste.io
+        container_name: poste
+        restart: always
+        networks:
+           - postgres
+        ports:
+           - "25:25"
+           - "8000:80"
+           - "4455:443"
+           - "110:110"
+           - "143:143"
+           - "465:465"
+           - "587:587"
+           - "993:993"
+           - "995:995"
+           - "4190:4190"
+        environment:
+           - HTTPS=ON
+        volumes:
+           - $PATH_MAIL_LOCAL:$PATH_MAIL_CONTAINER
 networks:
      postgres:
        driver: bridge
