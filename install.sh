@@ -9,12 +9,12 @@ MAIL=admin@medicincare.com
 cp /usr/share/zoneinfo/America/Guayaquil /etc/localtime 
 
 # Update and Upgrade
-#apt-get upgrade
-#apt-get update
+apt-get upgrade
+apt-get update
 
 # Install docker and docker-compose
-#apt-get -y install docker.io
-#apt-get -y install docker-compose
+apt-get -y install docker.io
+apt-get -y install docker-compose
 
 # Create and stop project
 if [ ! -d /opt/odoo ]; then
@@ -33,8 +33,7 @@ if [ ! -f /opt/odoo/nginx/nginx.conf ]; then
 fi
 
 # Install Certbot
-
-#apt-get -y install certbot
+apt-get -y install certbot
 
 # Install certificates
 
