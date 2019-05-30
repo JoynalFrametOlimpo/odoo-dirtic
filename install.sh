@@ -1,9 +1,9 @@
 # Ticgobi Config and Install Odoo Server
 # Author: JoynalFrametOlimpo
 
-DOMINIO=medicincare.com
-SUBDOMINIOS=*.medicincare.com
-MAIL=admin@medicincare.com
+DOMINIO=dominio.com
+SUBDOMINIOS=*.dominio.com
+MAIL=admin@dominio.com
 
 # Date Config
 cp /usr/share/zoneinfo/America/Guayaquil /etc/localtime 
